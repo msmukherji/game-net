@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'application#index'
   
-  #get ''
+  get '/game/battleship' => 'battleship_games#home'
 
+  get '/game/tictactoe' => 'tictactoe_games#home'
+  
 end

@@ -6,4 +6,15 @@ class ApplicationController < ActionController::Base
   def index
     render :index
   end
+
+  # def show_game
+  #   g = Game.find(params[:id])
+  #   if g.type == "TicTacToeGame"
+  #     render :tictactoehome
+  #   elsif g.type == "BattleshipGame"
+  #     render :battleshiphome
+  #   else
+  #     render json: {error: "page not found"}, status: 404
+  #   end
+  # end
 end

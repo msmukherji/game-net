@@ -1,1 +1,14 @@
-<h1> here's a home view </h1>
+
+<h1> welcome to game net </h1>
+<br>
+<% if current_user %>
+<h2> please select a game </h2>
+	<br>
+		<p> <a href = "game/battleship"> battleship</a></p>
+		<p> <a href = "game/tictactoe"> tic tac toe</a></p>
+	<br>
+  <span><%= current_user.email %></span>
+  <%= link_to " | sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <h2> please <%= link_to "log in", new_user_session_path %> to play some games.</h2>
+<% end %>
